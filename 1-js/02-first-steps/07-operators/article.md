@@ -37,8 +37,8 @@ Usually, the plus operator `+` sums numbers.
 But, if the binary `+` is applied to strings, it merges (concatenates) them:
 
 ```js
-let s = "my" + "string";
-alert(s); // mystring
+let s = "some" + "string";
+alert(s); // somestring
 ```
 
 Note that if one of the operands is a string, the other one is converted to a string too.
