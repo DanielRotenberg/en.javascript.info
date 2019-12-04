@@ -213,7 +213,7 @@ Static properties are used when we'd like to store class-level data, also not bo
 The syntax is:
 
 ```js
-class MyClass {
+class SomeClass {
   static property = ...;
 
   static method() {
@@ -225,8 +225,8 @@ class MyClass {
 Technically, static declaration is the same as assigning to the class itself:
 
 ```js
-MyClass.property = ...
-MyClass.method = ...
+SomeClass.property = ...
+SomeClass.method = ...
 ```
 
 Static properties and methods are inherited.
