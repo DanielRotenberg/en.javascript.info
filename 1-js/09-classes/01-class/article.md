@@ -15,7 +15,7 @@ But in the modern JavaScript, there's a more advanced "class" construct, that in
 
 The basic syntax is:
 ```js
-class MyClass {
+class SomeClass {
   // class methods
   constructor() { ... }
   method1() { ... }
@@ -25,7 +25,7 @@ class MyClass {
 }
 ```
 
-Then use `new MyClass()` to create a new object with all the listed methods.
+Then use `new SomeClass()` to create a new object with all the listed methods.
 
 The `constructor()` method is called automatically by `new`, so we can initialize the object there.
 
@@ -198,15 +198,15 @@ If a class expression has a name, it's visible inside the class only:
 ```js run
 // "Named Class Expression"
 // (no such term in the spec, but that's similar to Named Function Expression)
-let User = class *!*MyClass*/!* {
+let User = class *!*SomeClass*/!* {
   sayHi() {
-    alert(MyClass); // MyClass name is visible only inside the class
+    alert(SomeClass); // SomeClass name is visible only inside the class
   }
 };
 
-new User().sayHi(); // works, shows MyClass definition
+new User().sayHi(); // works, shows SomeClass definition
 
-alert(MyClass); // error, MyClass name isn't visible outside of the class
+alert(SomeClass); // error, SomeClass name isn't visible outside of the class
 ```
 
 
@@ -330,7 +330,7 @@ The property `name` is not placed into `User.prototype`. Instead, it is created 
 The basic class syntax looks like this:
 
 ```js
-class MyClass {
+class SomeClass {
   prop = value; // property
 
   constructor(...) { // constructor
@@ -347,6 +347,6 @@ class MyClass {
 }
 ```
 
-`MyClass` is technically a function (the one that we provide as `constructor`), while methods, getters and setters are written to `MyClass.prototype`.
+`SomeClass` is technically a function (the one that we provide as `constructor`), while methods, getters and setters are written to `SomeClass.prototype`.
 
 In the next chapters we'll learn more about classes, including inheritance and other features.
