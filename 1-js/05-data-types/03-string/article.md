@@ -131,10 +131,10 @@ alert( `The backslash: \\` ); // The backslash: \
 The `length` property has the string length:
 
 ```js run
-alert( `My\n`.length ); // 3
+alert( `your\n`.length ); // 5
 ```
 
-Note that `\n` is a single "special" character, so the length is indeed `3`.
+Note that `\n` is a single "special" character, so the length is indeed `5`.
 
 ```warn header="`length` is a property"
 People with a background in some other languages sometimes mistype by calling `str.length()` instead of just `str.length`. That doesn't work.
