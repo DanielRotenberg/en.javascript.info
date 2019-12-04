@@ -34,7 +34,7 @@ We can use this function like this:
 
 ```js
 // load and execute the script at the given path
-loadScript('/my/script.js');
+loadScript('/some/script.js');
 ```
 
 The script is executed "asynchronously", as it starts loading now, but runs later, when the function has already finished.
@@ -42,7 +42,7 @@ The script is executed "asynchronously", as it starts loading now, but runs late
 If there's any code below `loadScript(…)`, it doesn't wait until the script loading finishes.
 
 ```js
-loadScript('/my/script.js');
+loadScript('/some/script.js');
 // the code below loadScript
 // doesn't wait for the script loading to finish
 // ...
@@ -53,7 +53,7 @@ Let's say we need to use the new script as soon as it loads. It declares new fun
 But if we do that immediately after the `loadScript(…)` call, that wouldn't work:
 
 ```js
-loadScript('/my/script.js'); // the script has "function newFunction() {…}"
+loadScript('/some/script.js'); // the script has "function newFunction() {…}"
 
 *!*
 newFunction(); // no such function!
@@ -80,7 +80,7 @@ function loadScript(src, *!*callback*/!*) {
 Now if we want to call new functions from the script, we should write that in the callback:
 
 ```js
-loadScript('/my/script.js', function() {
+loadScript('/some/script.js', function() {
   // the callback runs after the script is loaded
   newFunction(); // so now it works
   ...
@@ -118,12 +118,12 @@ How can we load two scripts sequentially: the first one, and then the second one
 The natural solution would be to put the second `loadScript` call inside the callback, like this:
 
 ```js
-loadScript('/my/script.js', function(script) {
+loadScript('/some/script.js', function(script) {
 
   alert(`Cool, the ${script.src} is loaded, let's load one more`);
 
 *!*
-  loadScript('/my/script2.js', function(script) {
+  loadScript('/some/script2.js', function(script) {
     alert(`Cool, the second script is loaded`);
   });
 */!*
@@ -136,12 +136,12 @@ After the outer `loadScript` is complete, the callback initiates the inner one.
 What if we want one more script...?
 
 ```js
-loadScript('/my/script.js', function(script) {
+loadScript('/some/script.js', function(script) {
 
-  loadScript('/my/script2.js', function(script) {
+  loadScript('/some/script2.js', function(script) {
 
 *!*
-    loadScript('/my/script3.js', function(script) {
+    loadScript('/some/script3.js', function(script) {
       // ...continue after all scripts are loaded
     });
 */!*
@@ -177,7 +177,7 @@ It calls `callback(null, script)` for successful load and `callback(error)` othe
 
 The usage:
 ```js
-loadScript('/my/script.js', function(error, script) {
+loadScript('/some/script.js', function(error, script) {
   if (error) {
     // handle error
   } else {
