@@ -234,15 +234,15 @@ num = 5; // error: num is not defined
 To declare a constant (unchanging) variable, use `const` instead of `let`:
 
 ```js
-const myBirthday = '18.04.1982';
+const birthday = '18.04.1982';
 ```
 
 Variables declared using `const` are called "constants". They cannot be reassigned. An attempt to do so would cause an error:
 
 ```js run
-const myBirthday = '18.04.1982';
+const birthday = '18.04.1982';
 
-myBirthday = '01.01.2001'; // error, can't reassign the constant!
+birthday = '01.01.2001'; // error, can't reassign the constant!
 ```
 
 When a programmer is sure that a variable will never change, they can declare it with `const` to guarantee and clearly communicate that fact to everyone.
