@@ -182,12 +182,12 @@ The new class `PropertyRequiredError` is easy to use: we only need to pass the p
 
 Please note that `this.name` in `PropertyRequiredError` constructor is again assigned manually. That may become a bit tedious -- to assign `this.name = <class name>` in every custom error class. We can avoid it by making our own "basic error" class that assigns `this.name = this.constructor.name`. And then inherit all our custom errors from it.
 
-Let's call it `MyError`.
+Let's call it `SomeError`.
 
-Here's the code with `MyError` and other custom error classes, simplified:
+Here's the code with `SomeError` and other custom error classes, simplified:
 
 ```js run
-class MyError extends Error {
+class SomeError extends Error {
   constructor(message) {
     super(message);
 *!*
