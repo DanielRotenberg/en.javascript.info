@@ -384,8 +384,8 @@ Custom elements can be of two types:
       attributeChangedCallback(name, oldValue, newValue) { /* ... */ }
       adoptedCallback() { /* ... */ }
      }
-    customElements.define('my-element', SomeElement);
-    /* <my-element> */
+    customElements.define('some-element', SomeElement);
+    /* <some-element> */
     ```
 
 2. "Customized built-in elements" -- extensions of existing elements.
@@ -394,7 +394,7 @@ Custom elements can be of two types:
     ```js
     class SomeButton extends HTMLButtonElement { /*...*/ }
     customElements.define('some-button', SomeElement, {extends: 'button'});
-    /* <button is="my-button"> */
+    /* <button is="some-button"> */
     ```
 
 Custom elements are well-supported among browsers. Edge is a bit behind, but there's a polyfill <https://github.com/webcomponents/webcomponentsjs>.
