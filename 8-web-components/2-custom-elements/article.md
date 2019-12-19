@@ -376,7 +376,7 @@ Custom elements can be of two types:
     Definition scheme:
 
     ```js
-    class MyElement extends HTMLElement {
+    class SomeElement extends HTMLElement {
       constructor() { super(); /* ... */ }
       connectedCallback() { /* ... */ }
       disconnectedCallback() { /* ... */  }
@@ -384,7 +384,7 @@ Custom elements can be of two types:
       attributeChangedCallback(name, oldValue, newValue) { /* ... */ }
       adoptedCallback() { /* ... */ }
      }
-    customElements.define('my-element', MyElement);
+    customElements.define('my-element', SomeElement);
     /* <my-element> */
     ```
 
@@ -392,8 +392,8 @@ Custom elements can be of two types:
 
     Requires one more `.define` argument, and `is="..."` in HTML:
     ```js
-    class MyButton extends HTMLButtonElement { /*...*/ }
-    customElements.define('my-button', MyElement, {extends: 'button'});
+    class SomeButton extends HTMLButtonElement { /*...*/ }
+    customElements.define('some-button', SomeElement, {extends: 'button'});
     /* <button is="my-button"> */
     ```
 
