@@ -449,7 +449,7 @@ let options = {
 function showMenu(*!*{title = "Untitled", width = 200, height = 100, items = []}*/!*) {
   // title, items – taken from options,
   // width, height – defaults used
-  alert( `${title} ${width} ${height}` ); // My Menu 200 100
+  alert( `${title} ${width} ${height}` ); // Some Menu 200 100
   alert( items ); // Item1, Item2
 }
 
