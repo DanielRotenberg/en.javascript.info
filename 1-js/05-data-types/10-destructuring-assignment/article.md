@@ -429,7 +429,7 @@ Like this?
 
 ```js
 // undefined where default values are fine
-showMenu("My Menu", undefined, undefined, ["Item1", "Item2"])
+showMenu("Some Menu", undefined, undefined, ["Item1", "Item2"])
 ```
 
 That's ugly. And becomes unreadable when we deal with more parameters.
@@ -441,7 +441,7 @@ We can pass parameters as an object, and the function immediately destructurizes
 ```js run
 // we pass object to function
 let options = {
-  title: "My menu",
+  title: "Some menu",
   items: ["Item1", "Item2"]
 };
 
@@ -460,7 +460,7 @@ We can also use more complex destructuring with nested objects and colon mapping
 
 ```js run
 let options = {
-  title: "My menu",
+  title: "Some menu",
   items: ["Item1", "Item2"]
 };
 
@@ -472,7 +472,7 @@ function showMenu({
   items: [item1, item2] // items first element goes to item1, second to item2
 }) {
 */!*
-  alert( `${title} ${w} ${h}` ); // My Menu 100 200
+  alert( `${title} ${w} ${h}` ); // Some Menu 100 200
   alert( item1 ); // Item1
   alert( item2 ); // Item2
 }
