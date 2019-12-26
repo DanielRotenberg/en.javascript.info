@@ -157,7 +157,7 @@ let userName;
 let test123;
 ```
 
-When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki/CamelCase) is commonly used. That is: words go one after another, each word except first starting with a capital letter: `myVeryLongName`.
+When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki/CamelCase) is commonly used. That is: words go one after another, each word except first starting with a capital letter: `someVeryLongName`.
 
 What's interesting -- the dollar sign `'$'` and the underscore `'_'` can also be used in names. They are regular symbols, just like letters, without any special meaning.
 
@@ -175,7 +175,7 @@ Examples of incorrect variable names:
 ```js no-beautify
 let 1a; // cannot start with a digit
 
-let my-name; // hyphens '-' aren't allowed in the name
+let some-name; // hyphens '-' aren't allowed in the name
 ```
 
 ```smart header="Case matters"
